@@ -1,0 +1,22 @@
+.container
+
+{
+    display: flex;
+    justify-content: center;
+}
+
+body
+
+{
+
+    font-family: sans-serif;
+}
+
+#calculatrice
+
+{   
+    height: 300px;
+    width: 500px;
+    background-color: white;
+    border: solid 1px;
+}
