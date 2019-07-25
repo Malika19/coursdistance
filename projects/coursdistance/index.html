@@ -18,19 +18,19 @@
         <button class="operator__action" data-action="multiply">&times;</button>
         <button class="operator__action" data-action="divide">÷</button>
         <div class="ligne1">
-            <button>7</button>
-            <button>8</button>
-            <button>9</button></div>
+            <button value="7">7</button>
+            <button value="8">8</button>
+            <button value="9">9</button></div>
         <div class="ligne2">
             <button>4</button>
-            <button>5</button>
-            <button>6</button></div>
+            <button value="5">5</button>
+            <button value="6">6</button></div>
         <div class="ligne3">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
+            <button value="1">1</button>
+            <button value="2">2</button>
+            <button value="3">3</button>
             <div class="ligne4">
-                <button>0</button></div>
+                <button value="0">0</button></div>
             <button data-action="decimal">.</button>
             <button data-action="effacer">ce</button>
             <button class="clavier__eguale" data-action="calculate">=</button>
@@ -38,75 +38,11 @@
         </div>
 
         <script>
-            const calculator = {
-  displayValue: '0',
-  firstOperand: null,
-  waitingForSecondOperand: false,
-  operator: null,
-};
+            
 
-function updateDisplay() {
-  const display = document.querySelector('.calculator-screen');
-  display.value = calculator.displayValue;
+let paragraphs = document.getElementsByTagName("p"); for(let i = 0; i < paragraphs.length ; i ++ ) {
+  bouton[i] .addEventListener("click",affichage)
 }
-
-updateDisplay();
-
-<input type="text" class="calculator-screen" value="" disabled />
-
-
-
-const keys = document.querySelector('.calculator-keys');
-keys.addEventListener('click', (event) => {
-  const { target } = event;
-  if (!target.matches('button')) {
-    return;
-  }
-
-  if (target.classList.contains('operator')) {
-    console.log('operator', target.value);
-    return;
-  }
-
-  if (target.classList.contains('decimal')) {
-    console.log('decimal', target.value);
-    return;
-  }
-
-  if (target.classList.contains('all-clear')) {
-    console.log('clear', target.value);
-    return;
-  }
-
-  console.log('digit', target.value);
-});
-
-
-
-const keys = document.querySelector('.calculator-keys');
-keys.addEventListener('click', (event) => {
-  const { target } = event;
-  if (!target.matches('button')) {
-    return;
-  }
-
-  if (target.classList.contains('operator')) {
-    console.log('operator', target.value);
-    return;
-  }
-
-  if (target.classList.contains('decimal')) {
-    console.log('decimal', target.value);
-    return;
-  }
-
-  if (target.classList.contains('all-clear')) {
-    console.log('clear', target.value);
-    return;
-  }
-
-  console.log('digit', target.value);
-});
 
         </script>
 
